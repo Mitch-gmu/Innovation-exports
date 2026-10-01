@@ -51,6 +51,10 @@ If a download is a ZIP (even one named `.dta`), leave it as is; the code unpacks
 | T7 | Pooled 2014/2025 model testing whether the innovation effect changed |
 | T8 to T11 | 2026 AI follow-up: prevalence, adoption by baseline status, adoption models, exports on innovation and AI |
 
+## Standalone notebook
+`notebooks/Innovation_Exports_Standalone.ipynb` contains all the code in one file (no `src/` needed) with outputs included.
+Put the three survey files in a `data/` folder next to it (or set `DATA_DIR` in the first cell) and run all cells (~50 s).
+
 ## Layout
 ```
 run_all.py            runs everything
@@ -59,6 +63,7 @@ requirements.txt      pip alternative
 src/data.py           loads .dta files, builds harmonised variables
 src/models.py         probit + marginal effects (delta-method SEs, survey weights), bivariate probit
 src/ai_extension.py   2026 AI follow-up analysis
+notebooks/            standalone notebook (all code inline, with outputs)
 tests/                unit tests (bivariate CDF, marginal effects, bivariate probit)
 data/raw/             put survey files here (git-ignored)
 output/               tables, figure, log
