@@ -10,4 +10,6 @@ dependencies:
   - patsy
   - matplotlib
   - pyreadstat
+  - jupyterlab
+  - ipykernel
   - pytest

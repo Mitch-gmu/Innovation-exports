@@ -4,3 +4,6 @@ scipy
 statsmodels>=0.14
 pyreadstat
 matplotlib
+patsy
+jupyterlab
+ipykernel
