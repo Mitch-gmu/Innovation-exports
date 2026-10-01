@@ -16,7 +16,7 @@ and a recursive bivariate probit written from scratch.
 ## Quick start (conda)
 ```bash
 git clone https://github.com/Mitch-gmu/Innovation-exports.git
-cd innovation-exports
+cd Innovation-exports
 conda env create -f environment.yml
 conda activate innovation-exports
 
