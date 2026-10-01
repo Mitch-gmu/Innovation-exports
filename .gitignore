@@ -1,0 +1,10 @@
+# Survey microdata is licensed by the World Bank and must not be redistributed
+data/raw/*
+!data/raw/README.md
+data/interim/*
+!data/interim/.gitkeep
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+.DS_Store

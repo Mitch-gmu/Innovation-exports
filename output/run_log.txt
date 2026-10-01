@@ -1,0 +1,132 @@
+
+== T1 descriptives
+ year       variable  n_valid  unweighted_share  weighted_share
+2014    innov_paper     2676             0.709           0.730
+2014      innov_any     2635             0.608           0.607
+2014        product     2610             0.498           0.527
+2014        process     2613             0.497           0.498
+2014 organizational     2615             0.397           0.365
+2014      marketing     2621             0.524           0.492
+2014            rnd     2596             0.174           0.138
+2014     export_any     2676             0.239           0.163
+2014  export_direct     2676             0.178           0.131
+2014       training     2573             0.293           0.307
+2025      innov_any     1043             0.426           0.337
+2025        product     1042             0.253           0.203
+2025        process     1042             0.249           0.198
+2025            rnd     1039             0.161           0.101
+2025     export_any     1043             0.076           0.065
+2025  export_direct     1043             0.046           0.044
+2025       training     1041             0.354           0.362
+
+2014 paper-definition innovators: 1897 of 2676 (2018 paper: 1,897 of 2,676)
+2014 exporters (any direct/indirect sales): 639 (2018 paper: 651)
+
+== T2 replication (2014, paper spec: innov + firm type + training + export zone), N=2424
+                             ame      se       p
+C(legal)[T.shareholder]  0.1557  0.0433  0.0003
+C(legal)[T.sole]        -0.0623  0.0266  0.0193
+C(export_zone)[T.2.0]    0.1870  0.0214  0.0000
+C(export_zone)[T.3.0]    0.2280  0.0403  0.0000
+innov                    0.0843  0.0187  0.0000
+training                 0.0301  0.0191  0.1152
+   2018 paper reported innovation ME = +0.1034
+
+== T3 effect of innovation (product|process|R&D) on export probability
+  year       outcome    weights    n     ame     se      p
+ 2014    export_any unweighted 2018  0.0372 0.0173 0.0317
+ 2014    export_any   weighted 2018  0.0304 0.0154 0.0480
+ 2014 export_direct unweighted 2018  0.0350 0.0154 0.0229
+ 2014 export_direct   weighted 2018  0.0260 0.0138 0.0591
+ 2025    export_any unweighted 1000  0.0003 0.0156 0.9869
+ 2025    export_any   weighted 1000 -0.0002 0.0142 0.9910
+ 2025 export_direct unweighted 1000  0.0154 0.0113 0.1732
+ 2025 export_direct   weighted 1000  0.0279 0.0120 0.0203
+
+== T4 innovation types -> export_any
+  year                         type    n     ame     se      p
+ 2014                      product 1979  0.0084 0.0205 0.6823
+ 2014                      process 1979 -0.0163 0.0220 0.4610
+ 2014               organizational 1979  0.0396 0.0213 0.0627
+ 2014                    marketing 1979  0.0141 0.0208 0.4991
+ 2014                          rnd 1979  0.0856 0.0248 0.0006
+ 2014 Wald: all types equal (coef) 1979     NaN    NaN 0.0219
+ 2025                      product  995  0.0072 0.0190 0.7044
+ 2025                      process  995  0.0187 0.0201 0.3503
+ 2025                          rnd  995 -0.0119 0.0194 0.5389
+ 2025 Wald: all types equal (coef)  995     NaN    NaN 0.5264
+
+== T5 combined vs single innovation -> export_any
+  year                           term    n     ame     se      p
+ 2014          single_only (vs none) 2018  0.0163 0.0237 0.4908
+ 2014             combined (vs none) 2018  0.0466 0.0192 0.0151
+ 2014 Wald: combined = single (coef) 2018     NaN    NaN 0.1732
+ 2025          single_only (vs none) 1000 -0.0136 0.0176 0.4394
+ 2025             combined (vs none) 1000  0.0182 0.0218 0.4058
+ 2025 Wald: combined = single (coef) 1000     NaN    NaN 0.1713
+
+== T6 recursive bivariate probit (innovation endogenous)
+  year   n  converged  biprobit_ATE_innov     se     rho  p_rho=0  probit_AME_same_sample
+ 2014 856       True              0.3608 0.0737 -0.7207   0.0153                  0.0706
+ 2025 999       True              0.1000 0.1110 -0.3489   0.3895                  0.0183
+
+== T7 pooled model, N=3018  (inn_y25 = change in innovation effect in 2025 vs 2014)
+               ame      se       p
+innov_any  0.0458  0.0153  0.0027
+inn_y25   -0.0239  0.0317  0.4501
+y25       -0.1817  0.0200  0.0000
+
+== AI extension: 777 firms, merged to 2025 baseline on idstd (all 777 matched)
+
+== T8 AI use (2026)
+                                measure  n_valid  unweighted  weighted
+                                any AI      777       0.427     0.432
+                            AI chatbot      774       0.351     0.377
+            generative AI (media/text)      771       0.250     0.260
+                      machine learning      775       0.101     0.102
+                              AI agent      774       0.093     0.102
+workflow automation / decision support      772       0.089     0.106
+                   autonomous machines      773       0.032     0.035
+        uses AI in R&D (adopters only)      329       0.602     0.590
+               sells own AI technology      775       0.041     0.035
+
+== T9 AI adoption by baseline status
+                                 group  value   n  ai_adoption_weighted  ai_adoption_unweighted
+innovated (product|process|R&D), 2025      0 447                 0.418                   0.418
+innovated (product|process|R&D), 2025      1 330                 0.457                   0.439
+                   product innovation      0 580                 0.417                   0.416
+                   product innovation      1 197                 0.489                   0.462
+                   process innovation      0 580                 0.426                   0.431
+                   process innovation      1 197                 0.453                   0.416
+                         R&D spending      0 651                 0.426                   0.415
+                         R&D spending      1 123                 0.490                   0.496
+                       exporter, 2025      0 721                 0.421                   0.424
+                       exporter, 2025      1  56                 0.611                   0.464
+
+== T10 effect of baseline innovation / exporting on P(AI adoption)
+                  spec       weights       term   n     ame     se      p
+      innovation only    unweighted  innov_any 749  0.0119 0.0382 0.7545
+      innovation only weighted (wt)  innov_any 749  0.0599 0.0401 0.1354
+     innovation types    unweighted    product 746  0.0829 0.0477 0.0824
+     innovation types    unweighted    process 746 -0.0415 0.0453 0.3595
+     innovation types    unweighted        rnd 746  0.0052 0.0551 0.9251
+     innovation types weighted (wt)    product 746  0.1236 0.0506 0.0146
+     innovation types weighted (wt)    process 746  0.0257 0.0483 0.5950
+     innovation types weighted (wt)        rnd 746  0.0008 0.0685 0.9901
+innovation + exporter    unweighted  innov_any 749  0.0132 0.0382 0.7301
+innovation + exporter    unweighted export_any 749 -0.0551 0.0689 0.4236
+innovation + exporter weighted (wt)  innov_any 749  0.0597 0.0402 0.1376
+innovation + exporter weighted (wt) export_any 749  0.0089 0.0901 0.9212
+
+== T11 export ~ innovation + AI adoption (association only)
+       outcome       weights      term   n     ame     se      p
+   export_any    unweighted innov_any 749  0.0166 0.0175 0.3450
+   export_any    unweighted  ai_adopt 749 -0.0112 0.0165 0.4951
+   export_any weighted (wt) innov_any 749  0.0245 0.0159 0.1242
+   export_any weighted (wt)  ai_adopt 749  0.0029 0.0141 0.8368
+export_direct    unweighted innov_any 749  0.0222 0.0117 0.0563
+export_direct    unweighted  ai_adopt 749  0.0020 0.0125 0.8720
+export_direct weighted (wt) innov_any 749  0.0425 0.0139 0.0022
+export_direct weighted (wt)  ai_adopt 749 -0.0036 0.0114 0.7499
+
+Timing: among 331 adopters with a first-use date, 55% first used AI BEFORE the baseline interview (so AI adoption often precedes the 2025 innovation/export measures).

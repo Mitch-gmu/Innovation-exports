@@ -1,0 +1,13 @@
+name: innovation-exports
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pandas>=2.0
+  - numpy
+  - scipy
+  - statsmodels>=0.14
+  - patsy
+  - matplotlib
+  - pyreadstat
+  - pytest
