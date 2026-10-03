@@ -10,7 +10,6 @@ and a recursive bivariate probit written from scratch.
 |---|---|
 | Does innovating raise the chance of exporting? | 2014: +3 to +4 points (p<0.05). 2025: about 0. No significant change between years (p=0.45). |
 | Which innovation type? | 2014: only formal R&D stands out (+8.6 points). 2025: none. Combining types does not help. |
-| What else goes with exporting? | Quality certification: +9 points (2014), +16 points (2025). |
 | AI (2026 follow-up, 777 firms) | 43% use AI, mostly chatbots. No link to exporting. Product innovators adopt more (+12 points weighted). |
 
 ## Quick start (conda)
